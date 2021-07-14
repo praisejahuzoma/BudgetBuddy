@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Dosis:wght@200&family=Roboto&display=swap');
+
+body{
+    background: #E3E8EB;
+}
+.contanier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.list-contanier{
+    width: 771px;
+    height: 499px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+}
+h1{
+    font-family: 'Boogaloo', cursive;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 76.1px;
+    top:47px;
+}
+h3{
+    font-family: 'Dosis', sans-serif;
+    font-weight:400;
+    font-size: 24px;
+    line-height: 30.34px;
+    text-align: center;
+    margin-top: -40px;
+    font-style: normal;
+
+}
+.list-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2.813rem;
+    width: 859px;
+    height: 33px;
+    justify-content: space-around;
+}
+.item-input{
+    width: 177px;
+    height: 33px;
+    background: #FFFFFF;
+    border: 3px solid rgba(170, 170, 170, 0.6);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 14.06px;
+    color: #AAAAAA;
+    padding: 0.438rem;
+   
+}
+.item-input:focus-visible {
+    outline-offset: 0px;
+    outline: none;
+}
+.description-input{
+    width: 220px;
+    height: 33px;
+    background: #FFFFFF;
+    border: 3px solid rgba(170, 170, 170, 0.6);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 14.06px;
+    color: #AAAAAA;
+    padding: 0.438rem;
+    
+}
+.description-input:focus-visible {
+    outline-offset: 0px;
+    outline: none;
+}
+.qty-input{
+    width: 70px;
+    height: 33px;
+    background: #FFFFFF;
+    border: 3px solid rgba(170, 170, 170, 0.6);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 14.06px;
+    color: #AAAAAA;
+    padding: 0.438rem;
+}
+.qty-input:focus-visible {
+    outline-offset: 0px;
+    outline: none;
+}
+.icon{
+    margin-left: -30px;
+    color: #AAAAAA;
+    font-size: 14px;
+    margin-top: 3px;
+}
+.down-icon{
+    margin-left: -23px;
+    margin-top: 14px;
+    color: #AAAAAA;
+    font-size: 14px;
+}
+.price-input{
+    width: 80px;
+    height: 33px;
+    background: #FFFFFF;
+    border: 3px solid rgba(170, 170, 170, 0.6);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 14.06px;
+    color: #AAAAAA;
+    padding: 0.438rem;
+}
+.price-input:focus-visible {
+    outline-offset: 0px;
+    outline: none;
+}
+.amount-input{
+    width: 106px;
+    height: 33px;
+    background: #FFFFFF;
+    border: 3px solid rgba(170, 170, 170, 0.6);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 14.06px;
+    color: #AAAAAA;
+    padding: 0.438rem;
+}
+.amount-input:focus-visible {
+    outline-offset: 0px;
+    outline: none;
+}
+.button{
+    font-family: 'Dosis', sans-serif;
+    width: 123px;
+    height: 33px;
+    font-weight: 600px;
+    font-size: 14px;
+    line-height: 17.7px;
+    color: #FFFFFF;
+    font-style: normal;
+    background-color: #FF0000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.list-heading {
+    display: flex;
+    font-family: "Roboto", san-serif;
+    color: #8D8D8D;
+    font-size: 0.75rem;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3.313rem;
+
+}
+.copyRight{
+    font-family: "Roboto", san-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.75rem;
+    line-height: 0.879rem;
+    margin-top: 70px;
+}

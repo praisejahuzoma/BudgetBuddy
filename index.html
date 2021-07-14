@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market list calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Market List App</title>
 </head>
 <body>
+    <div class="contanier">
+        <!-- heading -->
+         <div>
+           <h1>Market List App</h1>
+           <h3>YOUR DIGITAL MARKET LIST</h3>
+         </div>
+         <!-- end of heading -->
+         
+         <!-- list contanier -->
+          <div class="list-contanier">
+            <div class="list-heading">
+                <input type="checkbox" name="selectAll" id="selectAll">
+                <h4>Item</h4>
+                <h4>Description</h4>
+                <h4>Quantity</h4>
+                <h4>Unit Price</h4>
+                <h4>Amount</h4>
+            </div>
+          </div>
+         <!-- end of list-contanier -->
+
+         <!-- list input -->
+          <div class="list-input">
+            <input type="text" class="item-input" placeholder="Enter item here">
+            <input type="text" class="description-input" placeholder="Enter item description here">
+            <input type="text" class="qty-input" placeholder="Qty" >
+            <!-- icon -->
+            <span class="icon"><i class="fa fa-caret-up"></i></span>
+            <span class="down-icon"><i class="fa fa-caret-down"></i></span>
+            <!-- end of icon -->
+            <input type="text" class="price-input" placeholder="Unit Price">
+            <input type="text" class="amount-input" placeholder="Amount">
+            <button class="button">ADD ITEM TO LIST</button>
+          </div>
+         <!-- end of list input -->
+         
+         <!-- copy right -->
+          <div class="copyRight">
+            <p>Copyright &copy; <span class="year"></span> Praisejah Uzoma</p>
+          </div>
+         <!-- end of copy right -->
+    </div>
     
+
+    <script src="js/script.js"></script>
 </body>
 </html>
