@@ -176,6 +176,28 @@ h3{
     margin-top: 3.313rem;
 
 }
+.item{
+    margin-left: 90px;
+    width: 50px;
+}
+.desc{
+    margin-left: 65px;
+    width: 80px;
+}
+
+.qty{
+    margin-left: 75px;
+    width: 20px;
+}
+
+.price{
+  margin-left: 110px;
+}
+
+.amount{
+   margin-left: 115px;
+   width: 10px;
+}
 .list-item{
     display: flex;
     font-family: "Roboto", san-serif;
@@ -184,28 +206,13 @@ h3{
     align-items: center;
     margin-top: 1.25rem;
     border-bottom: 0.063rem solid #ECECEC ;
-    margin-left: 3rem;
+    margin-left: 0rem;
     margin-right: 3rem;
     padding-left: 0rem;
     padding-bottom: 0.5rem;
 
 }
 
-.item{
-    margin-left: 5.438rem;
-}
-.desc{
-    margin-left: 4.063rem;
-}
-.qty{
-    margin-left: 8.125rem;
-}
-.price{
-    margin-left: 7.375rem;
-}
-.amount{
-    margin-left: 6.438rem;
-}
 
 .copyRight{
     font-family: "Roboto", san-serif;
@@ -216,6 +223,7 @@ h3{
     margin-top: 4.375rem;
     
 }
+
 .total{
     margin-right: 3rem;
     margin-top: 2.125rem;
@@ -233,4 +241,8 @@ h3{
 
 .list-item:last-child {
     border:none;
+}
+
+.list-item .desc{
+    width: 5rem;
 }
