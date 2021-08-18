@@ -7,25 +7,31 @@ yearText.innerHTML = year;
 // end of copy right
 
 let marketList = [
-   
+
 ];
 
+
+
+
 const amount = document.querySelector(".amount-input");
+const description = document.querySelector(".description-input")
+const item = document.querySelector(".item-input")
 const button = document.querySelector("button");
 const qty = document.querySelector(".qty-input");
 const price = document.querySelector(".price-input");
+const total = document.querySelector("#total")
 
 
-button.addEventListener("click",() => {
+button.addEventListener("click", () => {
     const item = document.querySelector(".item-input").value;
     const description = document.querySelector(".description-input").value;
     const quantity = document.querySelector(".qty-input").value;
     const price = document.querySelector(".price-input").value;
     const id = Math.floor((Math.random() * 1000) + 1);
 
-    let listItem = {id:id,item:item,description:description,quantity:quantity,price:price, amount:quantity*price};
-   
-    if(item === '' || quantity === '' || price === ''){
+    let listItem = { id: id, item: item, description: description, quantity: quantity, price: price, amount: quantity * price };
+
+    if (item === '' || quantity === '' || price === '') {
         return
     }
     marketList.push(listItem)
@@ -35,7 +41,7 @@ button.addEventListener("click",() => {
     console.log(marketList)
 
     renderItems(marketList)
-    
+
 })
 
 const renderItems = (marketList) => {
@@ -53,32 +59,36 @@ const renderItems = (marketList) => {
                 <p class="amount">&#8358 ${listItem.amount}</p>`
         ul.appendChild(li)
     })
-
+    total.innerHTML = `&#8358 ${getTotal(marketList)}`
+    resetInputFields();
 }
 
 const qtyEvents = ['change', 'keyup'];
 
 qtyEvents.forEach(event => {
     qty.addEventListener(event, () => {
-        amount.value = qty.value*price.value
+        amount.value = qty.value * price.value
     })
 })
 
 qtyEvents.forEach(event => {
     price.addEventListener(event, () => {
-        amount.value = qty.value*price.value
-     });
-})
+        amount.value = qty.value * price.value
+    });
+});
 
+const numbers = [175, 50, 25];
+// document.getElementById("total").innerHTML = numbers.reduce(myFunc);
 
+const getTotal = (marketList) => {
+    return marketList.reduce((total, item) => {
+        return total + item.amount
+    }, 0)
+}
 
-
-
-
-
-
-
-
-
-
-
+const resetInputFields = () => {
+    item.value = ""
+    description.value = ""
+    price.value = ""
+    qty.value = 1
+}
