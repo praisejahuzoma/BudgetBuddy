@@ -11,7 +11,7 @@ import {
 // Firebase configuration settings for your app
 const appSettings = {
   databaseURL:
-    "https://budgetbuddy-3aa91-default-rtdb.europe-west1.firebasedatabase.app/",
+    "https://budgetbuddy-c8acf-default-rtdb.europe-west1.firebasedatabase.app/",
 };
 
 // Initialize the Firebase app with the provided settings
@@ -58,26 +58,142 @@ button.addEventListener("click", () => {
 
   push(marketListInDB, listItem);
 });
+// ... [Previous code remains unchanged]
 
+// Function to delete an item from the market list
+const deleteItem = (id) => {
+  const itemRef = ref(database, `marketList/${id}`); // Reference the specific item in the database
+
+  remove(itemRef)
+    .then(() => {
+      console.log(`Item with ID ${id} removed from Firebase`);
+      // After successful deletion, remove the item from the local array
+      const itemIndex = marketList.findIndex((item) => item.id === id);
+      if (itemIndex !== -1) {
+        marketList.splice(itemIndex, 1);
+        renderItems(marketList); // Update the UI after deletion
+      }
+    })
+    .catch((error) => {
+      console.error("Error removing item from Firebase:", error);
+    });
+};
+
+
+const currencySelector = document.getElementById("currency-selector");
+const totalMoney = document.querySelector(".total-money");
+
+// Function to convert amount based on selected currency
+const convertCurrency = (amount, selectedCurrency) => {
+  const ngnToUSD = 0.0025; // Replace with actual conversion rate
+  const ngnToEUR = 0.0021; // Replace with actual conversion rate
+
+  switch (selectedCurrency) {
+    case "USD":
+      return amount * ngnToUSD;
+    case "EUR":
+      return amount * ngnToEUR;
+    default:
+      return amount; // If currency is NGN (Naira), return the original amount
+  }
+};
+
+// Helper function to format currency based on the selected currency
+const formatCurrency = (amount, currency) => {
+  switch (currency) {
+    case "USD":
+      return `&#36; ${amount.toFixed(2)}`; // Format Dollar with two decimal places
+    case "EUR":
+      return `&#8364; ${amount.toFixed(2)}`; // Format Euro with two decimal places
+    default:
+      return `&#8358; ${amount.toFixed(2)}`; // Format Naira with two decimal places
+  }
+};
+
+// Function to set the selected currency and update the UI
+const setCurrency = (selectedCurrency) => {
+  localStorage.setItem("selectedCurrency", selectedCurrency); // Store selected currency in localStorage
+  renderItems(marketList);
+};
+
+// Event listener for currency selection change
+currencySelector.addEventListener("change", () => {
+  setCurrency(currencySelector.value);
+});
+
+// Function to get the selected currency from localStorage or default to NGN (Naira)
+const getSelectedCurrency = () => {
+  return localStorage.getItem("selectedCurrency") || "NGN";
+};
+
+// Function to initialize the selected currency and render items
+const initializeCurrency = () => {
+  const selectedCurrency = getSelectedCurrency();
+  currencySelector.value = selectedCurrency;
+  renderItems(marketList);
+};
+
+// Modify the renderItems function to apply currency conversion
 const renderItems = (marketList) => {
-  let ul = document.querySelector(".list-items");
+  const ul = document.querySelector(".list-items");
   ul.innerHTML = "";
+
+  const selectedCurrency = getSelectedCurrency();
+   const currencySymbol = getCurrencySymbol(selectedCurrency);
+
   marketList.forEach((listItem) => {
     const li = document.createElement("li");
-    li.setAttribute("class", "list-item");
-    li.setAttribute("data-key", listItem.id);
+     li.setAttribute("class", "list-item");
+     li.setAttribute("data-key", listItem.id);
+
+    const convertedAmount = convertCurrency(listItem.amount, selectedCurrency);
+
+
     li.innerHTML = `  
-        <input type="checkbox" name="selectAll" id="selectAll" class="checkbox">
-        <p class="item">${listItem.item}</p>
-        <p class="desc">${listItem.description}</p>
-        <p class="qty">${listItem.quantity}</p>
-        <p class="price">&#8358 ${listItem.price}</p>
-        <p class="amount">&#8358 ${listItem.amount}</p>`;
+      <box-icon name='message-square-x' color='#73b6c8' class="checkbox"></box-icon>
+      <p class="item">${listItem.item}</p>
+      <p class="desc">${listItem.description}</p>
+      <p class="qty">${listItem.quantity}</p>
+      <p class="price">${formatCurrency(convertedAmount, selectedCurrency)}</p>
+   <p class="amount">${currencySymbol} ${listItem.amount} </p>`;
+
     ul.appendChild(li);
+    // Attach the deleteItem function to each delete icon
+    li.querySelector(".checkbox").addEventListener("click", () => {
+      deleteItem(listItem.id);
+    });
   });
-  total.innerHTML = `&#8358 ${getTotal(marketList)}`;
+
+  totalMoney.innerHTML = `${formatCurrency(getTotal(marketList), selectedCurrency)}`;
   resetInputFields();
 };
+const getCurrencySymbol = (currencyCode) => {
+  switch (currencyCode) {
+    case "USD":
+      return "&#36;"; // Dollar symbol
+    case "EUR":
+      return "&#8364;"; // Euro symbol
+    default:
+      return "&#8358;"; // Default to Naira symbol
+  }
+};
+// On page load, initialize the selected currency
+window.addEventListener("load", () => {
+  initializeCurrency();
+});
+
+// Listen for changes in the Firebase database
+onValue(marketListInDB, (snapshot) => {
+  marketList = [];
+  snapshot.forEach((childSnapshot) => {
+    const item = childSnapshot.val();
+    marketList.push(item);
+  });
+
+  renderItems(marketList);
+});
+
+// ... [Rest of your code remains unchanged]
 
 const qtyEvents = ["change", "keyup"];
 
@@ -116,3 +232,10 @@ onValue(marketListInDB, (snapshot) => {
 
   renderItems(marketList);
 });
+
+
+
+
+
+
+

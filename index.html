@@ -1,65 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>BudgetBuddy</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>BudgetBuddy</title>
 </head>
+
 <body>
-    <div class="contanier">
-        <!-- heading -->
-         <div>
-           <h1>Market List App</h1>
-           <h3>YOUR DIGITAL MARKET LIST</h3>
-         </div>
-         <!-- end of heading -->
-         
-         <!-- list contanier -->
-          <div class="list-contanier">
-            <div class="list-heading">
-                <input type="checkbox" name="selectAll" id="selectAll">
-                <h4 >Item</h4>
-                <h4>Description</h4>
-                <h4>Quantity</h4>
-                <h4>Unit Price</h4>
-                <h4>Amount</h4>
-            </div>
-
-            <!-- list -->
-
-            <ul class="list-items">
-              
-  
-            </ul>
-            
-            <h2 class="total" >Total:<span class="total-money" id="total">&#8358 0</span></h5>
-            <!-- end of list -->
-          </div>
-          <!-- end of list-contanier -->
-
-         <!-- list input -->
-          <div class="list-input">
-            <input type="text" class="item-input" placeholder="Enter item here">
-            <input type="text" class="description-input" placeholder="Enter item description here">
-            <input type="number" class="qty-input" placeholder="Qty" value=1 >
-        
-            <input type="number" class="price-input" placeholder="Unit Price">
-            <input type="text" class="amount-input" placeholder="Amount" disabled>
-            <button class="button">ADD ITEM TO LIST</button>
-          </div>
-         <!-- end of list input -->
-         
-         <!-- copy right -->
-          <div class="copyRight">
-            <p>Copyright &copy; <span class="year"></span> Praisejah Uzoma</p>
-          </div>
-         <!-- end of copy right -->
+  <!--  contanier -->
+  <div class="contanier">
+    <!--  heading -->
+    <div>
+      <h1>Market List App</h1>
+      <h3>YOUR DIGITAL MARKET LIST</h3>
     </div>
-    
 
-    <script type="module" src="script.js"></script>
+    <!-- list contanier -->
+    <div class="list-contanier">
+      <div class="list-heading">
+        <box-icon name='cart' type='solid' animation='tada' id="selectAll"></box-icon>
+        <h4>Item</h4>
+        <h4>Description</h4>
+        <h4>Quantity</h4>
+        <h4>Unit Price</h4>
+        <h4>Amount</h4>
+      </div>
+
+      <!-- list items -->
+      <ul class="list-items">
+
+      </ul>
+
+      <!-- currency -->
+      <div class="currency-section">
+        <h2 class="total">Total: <span class="total-money" id="total">&#8358; 0</span></h2>
+        <div class="currency-selector">
+          <label for="currency-selector">Select Currency:</label>
+          <select id="currency-selector" class="currency">
+            <option value="NGN">&#8358; Naira</option>
+            <option value="USD">&#36; Dollar</option>
+            <option value="EUR">&#8364; Euro</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+    <!-- end of list-contanier -->
+
+    <!-- list input -->
+    <div class="list-input">
+      <input type="text" class="item-input" placeholder="Enter item here">
+      <input type="text" class="description-input" placeholder="Enter item description here">
+      <input type="number" class="qty-input" placeholder="Qty" value=1>
+      <input type="number" class="price-input" placeholder="Unit Price">
+      <input type="text" class="amount-input" placeholder="Amount" disabled>
+      <button class="button">ADD ITEM TO LIST</button>
+    </div>
+    <!-- end of list input -->
+
+    <!-- copy right -->
+    <div class="copyRight">
+      <p>Copyright &copy; <span class="year"></span> Praisejah Uzoma</p>
+    </div>
+    <!-- end of copy right -->
+
+  </div>
+
+  <script src="script.js" type="module"></script>
 </body>
+
 </html>

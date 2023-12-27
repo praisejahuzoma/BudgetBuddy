@@ -197,6 +197,7 @@ h3{
 .amount{
    margin-left: 115px;
    width: 10px;
+   padding: 2px;
 }
 .list-item{
     display: flex;
@@ -246,3 +247,23 @@ h3{
 .list-item .desc{
     width: 5rem;
 }
+.checkbox{
+   font-size: 10px;
+   margin-left: 10px;
+}
+.currency-section {
+  text-align: center;
+  margin-top: 20px; 
+/* Adjust spacing between total and currency selector */
+}
+
+.currency-selector {
+  margin-top: 10px; /* Adjust space between label and select */
+  font-size: 25px;
+  padding: 10px;
+}
+
+.currency-selector label {
+  margin-right: 10px; /* Add space between label and select element */
+}
+
