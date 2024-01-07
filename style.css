@@ -1,31 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Dosis:wght@200&family=Roboto&display=swap');
 
-body{
+body {
     background: #E3E8EB;
 }
-.contanier{
+
+.contanier {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.list-contanier{
+
+.list-contanier {
     width: 48.188rem;
     height: 100%;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.25);
     border-radius: 0.375rem;
 }
-h1{
+
+h1 {
     font-family: 'Boogaloo', cursive;
     font-size: 4rem;
     font-weight: 400;
     line-height: 4.756rem;
-    top:2.938rem;
+    top: 2.938rem;
 }
-h3{
+
+h3 {
     font-family: 'Dosis', sans-serif;
-    font-weight:400;
+    font-weight: 400;
     font-size: 1.5rem;
     line-height: 1.896rem;
     text-align: center;
@@ -33,7 +37,8 @@ h3{
     font-style: normal;
 
 }
-.list-input{
+
+.list-input {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -42,7 +47,8 @@ h3{
     height: 2.063rem;
     justify-content: space-around;
 }
-.item-input{
+
+.item-input {
     width: 11.063rem;
     height: 2.063rem;
     background: #FFFFFF;
@@ -56,13 +62,15 @@ h3{
     line-height: 0.879rem;
     color: #AAAAAA;
     padding: 0.438rem;
-   
+
 }
+
 .item-input:focus-visible {
     outline-offset: 0px;
     outline: none;
 }
-.description-input{
+
+.description-input {
     width: 13.75rem;
     height: 2.063rem;
     background: #FFFFFF;
@@ -76,13 +84,15 @@ h3{
     line-height: 0.879rem;
     color: #AAAAAA;
     padding: 0.438rem;
-    
+
 }
+
 .description-input:focus-visible {
     outline-offset: 0px;
     outline: none;
 }
-.qty-input{
+
+.qty-input {
     width: 4.375rem;
     height: 2.063rem;
     background: #FFFFFF;
@@ -97,23 +107,27 @@ h3{
     color: #AAAAAA;
     padding: 0.438rem;
 }
+
 .qty-input:focus-visible {
     outline-offset: 0px;
     outline: none;
 }
-.icon{
+
+.icon {
     margin-left: -1.875rem;
     color: #AAAAAA;
     font-size: 0.875rem;
     margin-top: 0.188rem;
 }
-.down-icon{
+
+.down-icon {
     margin-left: -1.438rem;
     margin-top: 0.879rem;
     color: #AAAAAA;
     font-size: 0.875rem;
 }
-.price-input{
+
+.price-input {
     width: 5rem;
     height: 2.063rem;
     background: #FFFFFF;
@@ -128,11 +142,13 @@ h3{
     color: #AAAAAA;
     padding: 0.438rem;
 }
+
 .price-input:focus-visible {
     outline-offset: 0px;
     outline: none;
 }
-.amount-input{
+
+.amount-input {
     width: 6.625rem;
     height: 2.063rem;
     background: #FFFFFF;
@@ -147,11 +163,13 @@ h3{
     color: #AAAAAA;
     padding: 0.438rem;
 }
+
 .amount-input:focus-visible {
     outline-offset: 0px;
     outline: none;
 }
-.button{
+
+.button {
     font-family: 'Dosis', sans-serif;
     width: 7.688rem;
     height: 2.063rem;
@@ -176,37 +194,40 @@ h3{
     margin-top: 3.313rem;
 
 }
-.item{
+
+.item {
     margin-left: 90px;
     width: 50px;
 }
-.desc{
+
+.desc {
     margin-left: 65px;
     width: 80px;
 }
 
-.qty{
+.qty {
     margin-left: 75px;
     width: 20px;
 }
 
-.price{
-  margin-left: 110px;
+.price {
+    margin-left: 110px;
 }
 
-.amount{
-   margin-left: 115px;
-   width: 10px;
-   padding: 2px;
+.amount {
+    margin-left: 115px;
+    width: 10px;
+    padding: 2px;
 }
-.list-item{
+
+.list-item {
     display: flex;
     font-family: "Roboto", san-serif;
     color: black;
     font-size: 0.75rem;
     align-items: center;
     margin-top: 1.25rem;
-    border-bottom: 0.063rem solid #ECECEC ;
+    border-bottom: 0.063rem solid #ECECEC;
     margin-left: 0rem;
     margin-right: 3rem;
     padding-left: 0rem;
@@ -215,24 +236,25 @@ h3{
 }
 
 
-.copyRight{
+.copyRight {
     font-family: "Roboto", san-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 0.75rem;
     line-height: 0.879rem;
     margin-top: 4.375rem;
-    
+
 }
 
-.total{
+.total {
     margin-right: 3rem;
     margin-top: 2.125rem;
     font-family: "Roboto", san-serif;
     color: #AAAAAA;
     text-align: right;
 }
-.total span{
+
+.total span {
     color: #000000;
     font-family: "Roboto", san-serif;
     margin-left: 0.563rem;
@@ -241,29 +263,391 @@ h3{
 }
 
 .list-item:last-child {
-    border:none;
+    border: none;
 }
 
-.list-item .desc{
+.list-item .desc {
     width: 5rem;
 }
-.checkbox{
-   font-size: 10px;
-   margin-left: 10px;
+
+.checkbox {
+    font-size: 10px;
+    margin-left: 10px;
 }
+
 .currency-section {
-  text-align: center;
-  margin-top: 20px; 
-/* Adjust spacing between total and currency selector */
+    text-align: center;
+    margin-top: 20px;
 }
 
 .currency-selector {
-  margin-top: 10px; /* Adjust space between label and select */
-  font-size: 25px;
-  padding: 10px;
+    margin-top: 10px;
+    font-size: 25px;
+    padding: 10px;
 }
 
 .currency-selector label {
-  margin-right: 10px; /* Add space between label and select element */
+    margin-right: 10px;
 }
 
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+    .list-contanier {
+        width: 95%;
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .list-heading {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 15px;
+        font-size: 0.9rem;
+    }
+
+    .list-item {
+        flex-wrap: wrap;
+        margin-top: 10px;
+        font-size: 0.9rem;
+    }
+
+    .item,
+    .desc,
+    .qty,
+    .price,
+    .amount {
+        margin-left: 0;
+        width: auto;
+        padding: 10px;
+    }
+
+    .total {
+        margin-top: 15px;
+        font-size: 1rem;
+    }
+
+    .currency-selector {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+    .button {
+        width: 100%;
+        margin-top: 15px;
+        font-size: 1rem;
+    }
+
+    .copyRight {
+        margin-top: 15px;
+        font-size: 0.9rem;
+    }
+
+
+    .list-item {
+        flex-wrap: wrap;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        flex-direction: row;
+        font-family: "Roboto", san-serif;
+        font-size: 0.75rem;
+    }
+
+    .list-item>div {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .list-item .item,
+    .list-item .desc,
+    .list-item .qty,
+    .list-item .price,
+    .list-item .amount {
+        margin-left: 50px;
+        justify-content: space-around;
+    }
+
+    .list-item .item {
+        margin-left: 50px;
+        width: 50px;
+    }
+
+    .list-item .desc {
+        margin-left: 35px;
+        width: 40px;
+    }
+
+    .qty {
+        margin-left: 65px;
+        width: 20px;
+    }
+
+    .list-item .price {
+        margin-left: 75px;
+        width: 10px;
+    }
+
+    .list-item .amount {
+        margin-left: 98px;
+        width: 10px;
+
+    }
+
+    .list-item .desc {
+        width: 5rem;
+    }
+
+    .list-input {
+        flex-direction: row;
+        align-items: center;
+        width: 95%;
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+
+    .item-input,
+    .description-input,
+    .qty-input,
+    .price-input,
+    .amount-input {
+        width: 100%;
+        margin-bottom: 10px;
+        justify-content: space-around;
+        padding: 0.313rem;
+        flex-wrap: wrap;
+    }
+
+    .button {
+        font-size: 10px;
+        margin-bottom: 23px;
+        justify-content: space-around;
+    }
+
+    input {
+        margin-left: 5px;
+    }
+
+}
+
+
+@media screen and (max-width: 748px) {
+    .list-item .item {
+        margin-left: 50px;
+        width: 50px;
+    }
+
+    .list-item .desc {
+        margin-left: 35px;
+        width: 30px;
+    }
+
+    .list-item .qty {
+        margin-left: 95px;
+        width: 20px;
+    }
+
+    .list-item .price {
+        margin-left: 65px;
+        width: 10px;
+    }
+
+    .list-item .amount {
+        margin-left: 98px;
+        width: 10px;
+
+    }
+
+}
+
+@media screen and (max-width: 738px) {
+
+    .list-item .item {
+        margin-left: 45px;
+        width: 50px;
+    }
+
+    .list-item .desc {
+        margin-left: 45px;
+        width: 20px;
+    }
+
+    .list-item .qty {
+        margin-left: 90px;
+        width: 10px;
+    }
+
+    .list-item .price {
+        margin-left: 85px;
+        width: 10px;
+    }
+
+    .list-item .amount {
+        margin-left: 81px;
+        width: 10px;
+
+    }
+
+    .checkbox {
+        margin-left: 2px;
+
+    }
+
+}
+
+@media screen and (max-width: 710px) {
+
+    .list-item .item {
+        margin-left: 45px;
+        width: 50px;
+    }
+
+    .list-item .desc {
+        margin-left: 45px;
+        width: 20px;
+    }
+
+    .list-item .qty {
+        margin-left: 70px;
+        width: 10px;
+    }
+
+    .list-item .price {
+        margin-left: 65px;
+        width: 10px;
+    }
+
+    .list-item .amount {
+        margin-left: 58px;
+        width: 10px;
+
+    }
+
+
+}
+
+@media screen and (max-width: 648px) {
+
+    .list-item .item {
+        margin-left: 25px;
+        width: 50px;
+    }
+
+    .list-item .desc {
+        margin-left: 35px;
+        width: 20px;
+    }
+
+    .list-item .qty {
+        margin-left: 65px;
+        width: 20px;
+    }
+
+    .list-item .amount {
+        margin-left: 68px;
+        width: 10px;
+
+    }
+}
+
+@media screen and (max-width: 628px) {
+    .list-item .price {
+        margin-left: 55px;
+        width: 10px;
+    }
+
+    .list-item .amount {
+        margin-left: 48px;
+        width: 10px;
+
+    }
+}
+
+@media screen and (max-width: 598px) {
+
+    .list-item .desc {
+        margin-left: 15px;
+        width: 20px;
+    }
+
+    .list-item .qty {
+        margin-left: 35px;
+        width: 20px;
+    }
+
+    .list-item .price {
+        margin-left: 55px;
+        width: 10px;
+    }
+
+    .list-item .amount {
+        margin-left: 45px;
+        width: 10px;
+
+    }
+}
+
+@media screen and (max-width: 548px) {
+
+
+    .list-item .desc {
+        margin-left: 15px;
+        width: 20px;
+    }
+
+    .list-item .qty {
+        margin-left: 55px;
+        width: 10px;
+    }
+
+    .list-item .price {
+        margin-left: 35px;
+        width: 10px;
+    }
+
+    .list-item .amount {
+        margin-left: 51px;
+        width: 10px;
+
+    }
+
+    .checkbox {
+        margin-left: -15px;
+
+    }
+
+}
+
+@media screen and (max-width: 448px) {
+
+    .list-item .item {
+        margin-left: 5px;
+        width: 50px;
+    }
+
+    .list-item .desc {
+        margin-left: -5px;
+        width: 10px;
+    }
+
+    .list-item .qty {
+        margin-left: 35px;
+        width: 10px;
+    }
+
+    .list-item .price {
+        margin-left: 20px;
+        width: 5px;
+    }
+
+    .list-item .amount {
+        margin-right: -28px;
+        width: 10px;
+
+    }
+
+    .checkbox {
+        margin-left: -25px;
+
+    }
+
+}
