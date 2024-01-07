@@ -234,8 +234,21 @@ onValue(marketListInDB, (snapshot) => {
 });
 
 
-
-
-
-
-
+// Update placeholder text for smaller screens
+const itemInput = document.querySelector(".item-input");
+const descriptionInput = document.querySelector(".description-input");
+// Listen for window resize event
+window.addEventListener("resize", () => {
+    // Check window width
+  if (window.innerWidth <= 768) {
+     // Change placeholder for item-input and description-input
+    itemInput.setAttribute(
+      "placeholder",
+      "Enter Item"
+    );
+    descriptionInput.setAttribute(
+      "placeholder",
+      "Enter Desc"
+    );
+  } 
+});
