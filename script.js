@@ -139,12 +139,12 @@ const renderItems = (marketList) => {
   ul.innerHTML = "";
 
   const selectedCurrency = getSelectedCurrency();
-   const currencySymbol = getCurrencySymbol(selectedCurrency);
+  const currencySymbol = getCurrencySymbol(selectedCurrency);
 
   marketList.forEach((listItem) => {
     const li = document.createElement("li");
-     li.setAttribute("class", "list-item");
-     li.setAttribute("data-key", listItem.id);
+    li.setAttribute("class", "list-item");
+    li.setAttribute("data-key", listItem.id);
 
     const convertedAmount = convertCurrency(listItem.amount, selectedCurrency);
 
@@ -239,9 +239,9 @@ const itemInput = document.querySelector(".item-input");
 const descriptionInput = document.querySelector(".description-input");
 // Listen for window resize event
 window.addEventListener("resize", () => {
-    // Check window width
+  // Check window width
   if (window.innerWidth <= 768) {
-     // Change placeholder for item-input and description-input
+    // Change placeholder for item-input and description-input
     itemInput.setAttribute(
       "placeholder",
       "Enter Item"
@@ -250,5 +250,5 @@ window.addEventListener("resize", () => {
       "placeholder",
       "Enter Desc"
     );
-  } 
+  }
 });
